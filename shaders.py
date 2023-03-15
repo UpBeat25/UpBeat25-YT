@@ -6,7 +6,7 @@ pygame.init()
 
 # screen = pygame.display.set_mode((800, 600), pygame.OPENGL | pygame.DOUBLEBUF)
 class Shader:
-    def __init__(self, a: int=1"""Add a no to change the hue of shader"""):
+    def __init__(self, a: float=1"""Add a no to change the hue of shader"""):
         super().__init__()
         self.ctx = moderngl.create_context()
         self.quad_buffer = self.ctx.buffer(data=array('f', [
