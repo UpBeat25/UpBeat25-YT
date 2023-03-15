@@ -6,7 +6,7 @@ pygame.init()
 
 # screen = pygame.display.set_mode((800, 600), pygame.OPENGL | pygame.DOUBLEBUF)
 class Shader:
-    def __init__(self, a: int=1):
+    def __init__(self, a: int=1"""Add a no to change the hue of shader"""):
         super().__init__()
         self.ctx = moderngl.create_context()
         self.quad_buffer = self.ctx.buffer(data=array('f', [
@@ -53,7 +53,7 @@ class Shader:
         tex.write(surf.get_view('1'))
         return tex
 
-    def shader(self, screen):
+    def shader(self, screen): # use this only (to add shader)
         frame_tex = self.surf_to_texture(screen)
         frame_tex.use(0)
         self.program['tex'] = 0
