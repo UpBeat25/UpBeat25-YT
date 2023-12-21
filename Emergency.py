@@ -90,5 +90,5 @@ def send(sender, password, receiver, subject):
     email_session.quit()
 
 
-send("guardianvoice576@outlook.com", 'dummyaccount_password124', guardian_email, F"Help! `Test Account` is in trouble.")
+send("guardianvoice576@outlook.com", 'your_password', guardian_email, F"Help! `Test Account` is in trouble.")
 print("Location sent!")
